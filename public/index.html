@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivos</title>
+</head>
+<body>
+    <h1>Gestión de Archivos</h1>
+
+    <!-- Formulario para subir archivos -->
+    <h2>Subir archivos</h2>
+    <form action="upload" method="post" enctype="multipart/form-data"> 
+        <input type="file" name="archivo" required>
+        <button type="submit">Subir</button>
+    </form>
+
+    <h2>Eliminar archivo</h2>
+    <input type="text" id="fileName" placeholder="nombre del archivo a eliminar" required>
+    <button id="deleteFile">Eliminar</button>
+    
+
+    <h2>Ver archivos</h2>
+    <button id="listFiles">Listar Archivos</button>
+    <ul id="fileList"></ul>
+
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
