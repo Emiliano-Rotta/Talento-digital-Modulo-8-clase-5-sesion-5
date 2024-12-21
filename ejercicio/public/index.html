@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Archivos PDF</title>
+</head>
+<body>
+    <h1>Gestión de Archivos PDF</h1>
+
+    <!-- Formulario para subir archivos -->
+    <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="archivo" accept=".pdf" required>
+        <button type="submit">Subir PDF</button>
+    </form>
+
+    <!-- Lista de archivos -->
+    <h2>Archivos Subidos</h2>
+    <ul id="fileList"></ul>
+
+    <!-- No hay un boton para eliminar porque esta creado en el script -->
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
+
