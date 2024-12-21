@@ -1,10 +1,15 @@
 const express = require('express')
 const fileupload = require('express-fileupload')
+const cors = require('cors')
 const fs = require('fs')
 const path = require('path')
 
 const app = express()
 const PORT = 3000
+
+// Habilitar CORS para todas las solicitudes
+app.use(cors());
+
 
 app.use(express.static(path.join(__dirname, 'public')))
 
@@ -70,3 +75,15 @@ app.get('/files', (req, res) =>{
 app.listen(PORT, ()=>{
     console.log(`servidor levantado en el puerto ${PORT}`)
 })
+
+
+
+//nuevo tema cors
+
+// ¿Qué es CORS?
+// CORS (Cross-Origin Resource Sharing) es un mecanismo de seguridad que los navegadores implementan para controlar cómo se pueden compartir recursos entre diferentes orígenes. Un "origen" se define por el esquema (HTTP/HTTPS), dominio y puerto. Si tu aplicación intenta acceder a recursos desde un origen diferente (por ejemplo, un servidor de API externo), el navegador verifica si está permitido mediante CORS.
+
+
+//Si tu frontend está en http://localhost:3000 y tu backend en http://localhost:4000, necesitas habilitar CORS para que el frontend pueda consumir la API del backend.
+
+// npm i cors
